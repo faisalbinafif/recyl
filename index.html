@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/menu_sideslide.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link href="icofont/icofont.min.css" rel="stylesheet">   
+    <link href="icofont/icofont.min.css" rel="stylesheet">
 
 
     <!-- Latest compiled and minified CSS -->
@@ -36,8 +36,48 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <link rel="script" href="js/contactformtop.js">
 
 
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+
+        function sendmail() {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var nmsg_subject = $('#msg_subject').val();
+            var message = $('#message').val();
+
+            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+
+
+        }
+
+
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "faisalbinahmed77@gmail.com",
+            Password: "Passwd99@!Q",
+            To: 'faisalbinafif99@gmail.com',
+            From: "faisalbinahmed77@gmail.com",
+            Subject: "New Mail from Contact form " + name,
+            Body: Body
+        }).then(
+            message => {
+                if (message == 'OK') {
+                    alert('Your mail has been send. Thank you for connecting.');
+                }
+                else {
+                    console.error(message);
+                    alert('There is error at sending message. ')
+
+                }
+            }
+        );
+    </script> -->
     <style>
         .hero-sec {
             margin: 2rem auto;
@@ -59,26 +99,33 @@
 
 <body>
 
-    
+
     <!-- Header Section Start -->
     <header id="slider-area">
 
         <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-none d-lg-block" >
-    <div class="container clearfix">
-      <div class="contact-info float-left" style="margin: 1rem;">
-        <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="icofont-phone"></i> +1 223333444 5555
-      </div>
-      <!-- <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <section id="topbar" class="d-none d-lg-block">
+            <div class="container clearfix">
+                <div class="contact-info float-left" style="margin: 1rem;">
+                    <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
+                    <i class="icofont-phone"></i> +1 223333444 5555
+                </div>
+                <div class="social-links float-right">
+                    <!--<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="skype"><i class="icofont-skype"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      </div> -->
-    </div>
-  </section>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>-->
+
+                    <!-- <div id="popupform">
+
+        <button style="margin-top: 0.8rem;" type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Contact
+          </button>
+        </div> -->
+                </div>
+            </div>
+        </section>
 
         <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
             <div class="container">
@@ -302,11 +349,16 @@
 
     <!-- Call To Action Section Start -->
     <section id="aboutus" class="section" data-stellar-background-ratio="0.5">
-        <div class="container" >
-          <div class="section-header">
-              <h2 class="section-title">About Us</h2>
-              <p><strong>Clothing recycling is part of textile recycling. It involves recovering old clothing and shoes for sorting and processing. End products include clothing suitable for reuse, cloth scraps or rags as well as fibrous material. Interest in garment recycling is rapidly on the rise due to environmental awareness and landfill pressure. For entrepreneurs, it provides a business opportunity. In addition, various charities also generate revenue through their collection programs for old clothing.</strong></p>
-            <!-- <div class="col-lg-6 col-md-6 col-xs-12">            
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p><strong>Clothing recycling is part of textile recycling. It involves recovering old clothing and
+                        shoes for sorting and processing. End products include clothing suitable for reuse, cloth scraps
+                        or rags as well as fibrous material. Interest in garment recycling is rapidly on the rise due to
+                        environmental awareness and landfill pressure. For entrepreneurs, it provides a business
+                        opportunity. In addition, various charities also generate revenue through their collection
+                        programs for old clothing.</strong></p>
+                <!-- <div class="col-lg-6 col-md-6 col-xs-12">            
               <div class="cta-text">
                 <h5>Stil confused? Download a free lite version to get started!</h5>
               </div>
@@ -314,109 +366,202 @@
             <div class="col-lg-6 col-md-6 col-xs-12 text-right">
               <a href="#" class="btn btn-border">Download</a>
             </div> -->
-          </div>
+            </div>
         </div>
-      </section>
-      <!-- Call To Action Section Start -->
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Sevices To Action Section Start -->
+
+    <div class="card-group" style="margin: 6px 5rem; text-align:center">
+        <div class="card">
+            <img src="img/recycleimg/recim1.jpg" class="card-img-top" alt="img1">
+            <div class="card-body">
+                <h5 class="card-title">title-1</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nesciunt itaque
+                    quia veniam doloremque saepe earum! Dicta facere odio atque.</p>
+                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/recycleimg/recim2.jpeg" class="card-img-top" alt="img2">
+            <div class="card-body">
+                <h5 class="card-title">title-2</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nesciunt itaque
+                    quia veniam doloremque saepe earum! Dicta facere odio atque.</p>
+                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/recycleimg/recim3.jpg" class="card-img-top" alt="img3">
+            <div class="card-body">
+                <h5 class="card-title">title-3</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nesciunt itaque
+                    quia veniam doloremque saepe earum! Dicta facere odio atque.</p>
+                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sevices To Action Section End -->
 
 
-     <!-- Contact Section Start -->
-     <section id="contact" class="section">      
+
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section">
         <div class="contact-form">
-          <div class="container">
-            <div class="section-header">          
-              <h2 class="section-title">Get In Touch</h2>
-              <!-- <span>Contact</span> -->
-              <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
-            </div>
-            <div class="row">          
-              <div class="col-lg-9 col-md-9 col-xs-12">
-                <div class="contact-block">
-                  <form id="contactForm">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-                          <div class="help-block with-errors"></div>
-                        </div>                                 
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
-                          <div class="help-block with-errors"></div>
-                        </div> 
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group"> 
-                          <textarea class="form-control" id="message" placeholder="Your Message" rows="7" data-error="Write your message" required></textarea>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="submit-button">
-                          <button class="btn btn-common btn-effect" id="submit" type="submit">Send Message</button>
-                          <div id="msgSubmit" class="h3 hidden"></div> 
-                          <div class="clearfix"></div> 
-                        </div>
-                      </div>
-                    </div>            
-                  </form>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <!-- <span>Contact</span> -->
+                    <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+                        debitis.</p>
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-xs-12">
-                <div class="contact-deatils">
-                  <!-- Content Info -->
-                  <div class="contact-info_area">
-                    <div class="contact-info">
-                      <i class="lni-map"></i>
-                      <h5>Location</h5>
-                      <p>1900 Pico Blvd, New York br Centernial, colorado</p>
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-xs-12">
+                        <div class="contact-block">
+                            <form id="contactForm" action="mail.php" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Your Name" required data-error="Please enter your name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Email" id="email" class="form-control"
+                                                name="name" required data-error="Please enter your email">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Subject" id="msg_subject"
+                                                class="form-control" required data-error="Please enter your subject">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="message" placeholder="Your Message"
+                                                rows="7" data-error="Write your message" required></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="submit-button">
+                                            <button class="btn btn-common btn-effect" id="submit" type="submit">Send
+                                                Message</button>
+                                            <div id="msgSubmit" class="h3 hidden"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                            <script src="https://smtpjs.com/v3/smtp.js">
+                            </script>
+                            <script>
+                        
+                                function sendmail() {
+                                    var name = $('#Name').val();
+                                    var email = $('#Email').val();
+                                    var nmsg_subject = $('#msg_subject').val();
+                                    var message = $('#Message').val();
+                        
+                                    var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>msg_subject: ' + subject + '<br>Message: ' + message;
+                        
+                        
+                                }
+                        
+                        
+                                Email.send({
+                                    Host: "smtp.gmail.com",
+                                    Username: "faisalbinafif99@gmail.com",
+                                    Password: "Passwd99@!Q",
+                                    To: 'faisalbinahmed77@gmail.com',
+                                    From: "faisalbinafif99@gmail.com",
+                                    Subject: "New Mail from Contact form " + name,
+                                    Body: Body
+                                }).then(
+                                    message => {
+                                        if (message == 'OK') {
+                                            alert('Your mail has been send. Thank you for connecting.');
+                                        }
+                                        else {
+                                            console.error(message);
+                                            alert('There is error at sending message. ')
+                        
+                                        }
+                                    }
+                                );
+                            </script> -->
+                        
+                        </div>
                     </div>
-                    <!-- Content Info -->
-                    <div class="contact-info">
-                      <i class="lni-star"></i>
-                      <h5>E-mail</h5>
-                      <p>info@example.com</p>
-                    </div>
-                    <!-- Content Info -->
-                    <div class="contact-info">
-                      <i class="lni-phone"></i>
-                      <h5>Phone</h5>
-                      <p>+48 123 456 789</p>
-                    </div>
-                    <!-- Icon -->
-                    <ul class="footer-social">
-                      <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
-                      <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
-                      <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
-                      <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>            
-      </section>
-      <!-- Contact Section End -->
-      
-      <!-- Map Section Start -->
-      <section id="google-map-area">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 padding-0">
-              <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Map Section End -->
-  
 
+
+                    <div class="col-lg-3 col-md-3 col-xs-12">
+                        <div class="contact-deatils">
+                            <!-- Content Info -->
+                            <div class="contact-info_area">
+                                <div class="contact-info">
+                                    <i class="lni-map"></i>
+                                    <h5>Location</h5>
+                                    <p>1900 Pico Blvd, New York br Centernial, colorado</p>
+                                </div>
+                                <!-- Content Info -->
+                                <div class="contact-info">
+                                    <i class="lni-star"></i>
+                                    <h5>E-mail</h5>
+                                    <p>info@example.com</p>
+                                </div>
+                                <!-- Content Info -->
+                                <div class="contact-info">
+                                    <i class="lni-phone"></i>
+                                    <h5>Phone</h5>
+                                    <p>+48 123 456 789</p>
+                                </div>
+                                <!-- Icon -->
+                                <ul class="footer-social">
+                                    <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
+                                    <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
+                                    <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Map Section Start -->
+    <section id="google-map-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 padding-0">
+                    <object style="border:0; height: 450px; width: 100%;"
+                        data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map Section End -->
+
+
+
+
+
+
+    <!-- new contact form starts here-->
+
+
+
+    
 
 </body>
 
